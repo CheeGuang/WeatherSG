@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather @ Potong Pasir</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="logo">
+          <h1>Weather @ Potong Pasir</h1>
+        </div>
+        <h1 id="date-time">Loading...</h1>
+      </header>
+      <main>
+        <section class="top-section">
+          <section class="left-section" id="left-section">
+            <div class="outlook-2h">
+              <h2>2-Hour Outlook</h2>
+              <span class="content-2h">
+                <div class="div-img-2h">
+                  <img src="" class="img-2h" id="img-2h" />
+                </div>
+                <div class="text-2h" id="div-text-2h">
+                  <h3 id="text-2h"></h3>
+                  <h3 id="temp-2h"></h3>
+                </div>
+              </span>
+            </div>
+            <div class="24h-outlook">
+              <h2>24-Hour Outlook</h2>
+              <ul class="contents-24h">
+                <li class="content-24h">
+                  <img src="" class="img-24h" id="img1-24h" />
+                  <h3 class="text-24h" id="text1-24h"></h3>
+                </li>
+                <li class="content-24h">
+                  <img src="" alt="Rainy" class="img-24h" id="img2-24h" />
+
+                  <h3 class="text-24h" id="text2-24h">Hi</h3>
+                </li>
+                <li class="content-24h">
+                  <img
+                    src=""
+                    alt="thunderstorms"
+                    class="img-24h"
+                    id="img3-24h"
+                  />
+
+                  <h3 class="text-24h" id="text3-24h">Hi</h3>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="right-section">
+            <div class="sg-2h-outlook">
+              <h2>Singapore 2-Hour Outlook</h2>
+              <div class="image desktop-only">
+                <div class="time" id="valid-time"></div>
+                <div class="time updated-time" id="updated-time"></div>
+                <div id="weather-grid" class="weather-grid">
+                  <span
+                    data-toggle="tooltip"
+                    id="Ang_Mo_Kio"
+                    title="Ang Mo Kio
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Bedok"
+                    title="Bedok
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Bishan"
+                    title="Bishan
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Boon_Lay"
+                    title="Boon Lay
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Bukit_Batok"
+                    title="Bukit Batok
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Bukit_Merah"
+                    title="Bukit Merah
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Bukit_Panjang"
+                    title="Bukit Panjang
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Bukit_Timah"
+                    title="Bukit Timah
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Central_Water_Catchment"
+                    title="Central Water Catchment
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Changi"
+                    title="Changi
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Choa_Chu_Kang"
+                    title="Choa Chu Kang
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Clementi"
+                    title="Clementi
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="City"
+                    title="City
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Geylang"
+                    title="Geylang
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Hougang"
+                    title="Hougang
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Jalan_Bahar"
+                    title="Jalan Bahar
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Jurong_East"
+                    title="Jurong East
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Jurong_Island"
+                    title="Jurong Island
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Jurong_West"
+                    title="Jurong West
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Kallang"
+                    title="Kallang
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Lim_Chu_Kang"
+                    title="Lim Chu Kang
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Mandai"
+                    title="Mandai
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Marine_Parade"
+                    title="Marine Parade
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Novena"
+                    title="Novena
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Pasir_Ris"
+                    title="Pasir Ris
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Paya_Lebar"
+                    title="Paya Lebar
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Pioneer"
+                    title="Pioneer
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Pulau_Tekong"
+                    title="Pulau Tekong
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Pulau_Ubin"
+                    title="Pulau Ubin
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Punggol"
+                    title="Punggol
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Queenstown"
+                    title="Queenstown
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Seletar"
+                    title="Seletar
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Sembawang"
+                    title="Sembawang
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Sengkang"
+                    title="Sengkang
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Sentosa"
+                    title="Sentosa
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Serangoon"
+                    title="Serangoon
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Southern_Islands"
+                    title="Southern Islands
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Sungei_Kadut"
+                    title="Sungei Kadut
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Tampines"
+                    title="Tampines
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Tanglin"
+                    title="Tanglin
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Tengah"
+                    title="Tengah
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Toa_Payoh"
+                    title="Toa Payoh
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Tuas"
+                    title="Tuas
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Western_Islands"
+                    title="Western Islands
+Partly Cloudy"
+                    ><img class="image" src="" alt="Partly Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Western_Water_Catchment"
+                    title="Western Water Catchment
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Woodlands"
+                    title="Woodlands
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon" /></span
+                  ><span
+                    data-toggle="tooltip"
+                    id="Yishun"
+                    title="Yishun
+Cloudy"
+                    ><img class="image" src="" alt="Cloudy icon"
+                  /></span>
+                </div>
+                <img
+                  alt="map"
+                  src="https://www.nea.gov.sg/assets/images/map/sg-map-weather-forecast.png"
+                  class="sg-2h-map"
+                />
+              </div>
+            </div>
+          </section>
+        </section>
+        <section class="bottom-section">
+          <div class="4day-outlook">
+            <h2>4-Day Outlook</h2>
+            <ul class="contents-4d">
+              <li class="content-4d">
+                <img src="" class="img-4d" id="img1-4d" />
+                <div class="text-4d">
+                  <h4><strong class="header-4d" id="day1-4d"></strong></h4>
+                  <h4 id="weather1-4d"></h4>
+                  <h4 id="temp1-4d"></h4>
+                </div>
+              </li>
+              <li class="content-4d">
+                <img src="" class="img-4d" id="img2-4d" />
+                <div class="text-4d">
+                  <h4><strong class="header-4d" id="day2-4d"></strong></h4>
+                  <h4 id="weather2-4d"></h4>
+                  <h4 id="temp2-4d"></h4>
+                </div>
+              </li>
+              <li class="content-4d">
+                <img
+                  src=""
+                  alt="day thunderstorms"
+                  class="img-4d"
+                  id="img3-4d"
+                />
+                <div class="text-4d">
+                  <h4><strong class="header-4d" id="day3-4d">Thu</strong></h4>
+                  <h4 id="weather3-4d"></h4>
+                  <h4 id="temp3-4d"></h4>
+                </div>
+              </li>
+              <li class="content-4d">
+                <img src="" class="img-4d" id="img4-4d" />
+                <div class="text-4d">
+                  <h4><strong class="header-4d" id="day4-4d">Fri</strong></h4>
+                  <h4 id="weather4-4d"></h4>
+                  <h4 id="temp4-4d"></h4>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
