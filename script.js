@@ -14,15 +14,7 @@ const monthNames = [
   "December",
 ];
 
-const dayNames = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const dayNames = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 // Defining Weather Forecast Regions
 const Towns = [
