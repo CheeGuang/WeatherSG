@@ -476,6 +476,30 @@ function main() {
       return "weatherIcons-2h-24h/heavy-thundery-showers-and-with-gusty-winds.svg";
     else if ("thundery" in weather.toLowerCase())
       return "weatherIcons-2h-24h/thundery-showers.svg";
+    else if ("partly cloudy" in weather.toLowerCase())
+      return "weatherIcons-2h-24h/day-partly-cloudy.svg";
+    else if (
+      ("fair" in weather.toLowerCase()) |
+      ("warm" in weather.toLowerCase())
+    )
+      return "weatherIcons-2h-24h/day-fair-warm.svg";
+    else if ("haze" in weather.toLowerCase())
+      return "weatherIcons-2h-24h/hazy-slightly-hazy.svg";
+    else if (
+      ("light rain" in weather.toLowerCase()) |
+      ("light showers" in weather.toLowerCase())
+    )
+      return "weatherIcons-2h-24h/light-rain-showers-passing-showers.svg";
+    else if (
+      ("moderate rain" in weather.toLowerCase()) |
+      ("moderate showers" in weather.toLowerCase())
+    )
+      return "weatherIcons-2h-24h/moderate-rain-showers.svg";
+    else if (
+      ("heavy rain" in weather.toLowerCase()) |
+      ("heavy showers" in weather.toLowerCase())
+    )
+      return "weatherIcons-2h-24h/heavy-rain-showers.svg";
   }
 
   // Main
