@@ -474,32 +474,36 @@ function main() {
       !weather.toLowerCase().includes("windy")
     )
       return "weatherIcons-2h-24h/heavy-thundery-showers-and-with-gusty-winds.svg";
-    else if ("thundery" in weather.toLowerCase())
+    else if (weather.toLowerCase().includes("thundery"))
       return "weatherIcons-2h-24h/thundery-showers.svg";
-    else if ("partly cloudy" in weather.toLowerCase())
+    else if (weather.toLowerCase().includes("partly cloudy"))
       return "weatherIcons-2h-24h/day-partly-cloudy.svg";
     else if (
-      ("fair" in weather.toLowerCase()) |
-      ("warm" in weather.toLowerCase())
+      weather.toLowerCase().includes("fair") |
+      weather.toLowerCase().includes("warm")
     )
       return "weatherIcons-2h-24h/day-fair-warm.svg";
-    else if ("haze" in weather.toLowerCase())
+    else if (weather.toLowerCase().includes("haze"))
       return "weatherIcons-2h-24h/hazy-slightly-hazy.svg";
     else if (
-      ("light rain" in weather.toLowerCase()) |
-      ("light showers" in weather.toLowerCase())
+      weather.toLowerCase().includes("light rain") |
+      weather.toLowerCase().includes("light showers")
     )
       return "weatherIcons-2h-24h/light-rain-showers-passing-showers.svg";
     else if (
-      ("moderate rain" in weather.toLowerCase()) |
-      ("moderate showers" in weather.toLowerCase())
-    )
-      return "weatherIcons-2h-24h/moderate-rain-showers.svg";
-    else if (
-      ("heavy rain" in weather.toLowerCase()) |
-      ("heavy showers" in weather.toLowerCase())
+      weather.toLowerCase().includes("heavy rain") |
+      weather.toLowerCase().includes("heavy showers")
     )
       return "weatherIcons-2h-24h/heavy-rain-showers.svg";
+    else if (
+      weather.toLowerCase().includes("rain") |
+      weather.toLowerCase().includes("showers")
+    )
+      return "weatherIcons-2h-24h/moderate-rain-showers.svg";
+    else if (weather.toLowerCase().includes("windy")) {
+      console.log("hi");
+      return "weatherIcons-2h-24h/windy.svg";
+    }
   }
 
   // Main
