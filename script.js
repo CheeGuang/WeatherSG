@@ -70,7 +70,7 @@ const Towns = [
 // Defining Weather Icons Shorthand
 var availableLegendList = [];
 availableLegendList.push({ forecast: "fa", description: "Fair" });
-availableLegendList.push({ forecast: "fn", description: "Fair" });
+availableLegendList.push({ forecast: "fn", description: "Fair (Night)" });
 availableLegendList.push({ forecast: "fw", description: "Fair &amp; Warm" });
 availableLegendList.push({
   forecast: "pc",
