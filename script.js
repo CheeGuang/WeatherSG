@@ -508,7 +508,34 @@ function main() {
     const data4d = await res.json();
 
     // Cleaning Data
-    const pp4d = clean4d(data4d);
+    let pp4d;
+    try {
+      try {
+        pp4d = clean4d(data4d);
+      } catch {
+        const res = await fetch(
+          (url = `https://api.data.gov.sg/v1/environment/4-day-weather-forecast/?date_time=${d.getFullYear()}-${
+            (d.getMonth() + 1).length != 1
+              ? d.getMonth() + 1
+              : "0" + (d.getMonth() + 1)
+          }-${
+            d.getDate().toString().length != 1
+              ? d.getDate()
+              : "0" + d.getDate().toString()
+          }T01:00:00`)
+        );
+        const data4d = await res.json();
+        pp4d = clean4d(data4d);
+      }
+    } catch {
+      const res = await fetch(
+        (url =
+          "https://api.data.gov.sg/v1/environment/4-day-weather-forecast/?date_time=2023-10-08T01:00:00")
+      );
+      const data4d = await res.json();
+      pp4d = clean4d(data4d);
+    }
+
     function clean4d(data4d) {
       const pp4d = [
         data4d["items"][0]["forecasts"].map((days) => [
